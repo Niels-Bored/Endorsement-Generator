@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 body{
     margin: 0;
+    background-image: url('../Imagenes/background.jpg');
+    background-size: cover;
 }
 .form-structure{
     width: 100%;
@@ -9,16 +11,35 @@ body{
 }
 .form-left, .form-right{
     width: 50%;
+    height: 91vh;
+}
+.form-left{
+
 }
 .form-right{
-    padding: 50px 100px;
+    padding: 60px 100px;
     display: flex;
     flex-direction: column;
     background-color: black;
     color:white;
     box-sizing: border-box;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }
 .title{
+    margin-bottom: 35px;
     font-size: 40px;
     font-family: 'Roboto Condensed';
 }
@@ -41,14 +62,10 @@ input{
     color: white;
     font-family: 'Montserrat', sans-serif;
     opacity: 0.6;
+    transition: all 0.5s ease-out;
 }
 .input-labels input:focus{
-    outline: none;
-    opacity: 0.9;
-    transition: all 0.5s ease-out;
-    border-bottom: 1.2px solid white;
     margin-top: 15px;
-    transform: scaleX(1.1)
 }
 input:focus{
     outline: none;
@@ -72,15 +89,28 @@ td input{
     width: 80px;
 }
 button{
-    width: 250px;
-    height: 40px;
+    width: 220px;
+    padding: 10px 0px;
     margin-top: 35px;
     font-family: 'Roboto Condensed';
     font-size: 18px;
     background-color: white;
+    border: none;
 }
 button:hover{
     cursor: pointer;
+}
+.bottom-label{
+    height: 9vh;
+    background-color: rgba(0, 42, 81, 0.5);
+    /* background-color: #002a51; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+p{
+    margin: 0;
 }
 /* 
 body{
