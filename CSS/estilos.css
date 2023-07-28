@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 body{
     margin: 0;
-    background-image: url('../Imagenes/background.jpg');
-    background-size: cover;
+    background-image: url('../Imagenes/background.webp');
+    background-size:contain;
 }
 .form-structure{
     width: 100%;
