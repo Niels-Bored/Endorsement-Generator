@@ -3,26 +3,29 @@
 body{
     margin: 0;
     background-image: url('../Imagenes/background.webp');
-    background-size:contain;
+    background-size:cover;
 }
 .form-structure{
     width: 100%;
     display: flex;
 }
 .form-left, .form-right{
-    width: 50%;
-    height: 91vh;
+    height: calc(100vh - 46px);
+    padding: 60px 100px;
+    box-sizing: border-box;
 }
 .form-left{
-
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .form-right{
-    padding: 60px 100px;
+    width: 60%;
     display: flex;
     flex-direction: column;
     background-color: black;
     color:white;
-    box-sizing: border-box;
     overflow: scroll;
     overflow-x: hidden;
 }
@@ -42,6 +45,15 @@ body{
     margin-bottom: 35px;
     font-size: 40px;
     font-family: 'Roboto Condensed';
+    color: white;
+}
+.adjustment-size{
+    font-size: 55px;
+}
+.sub-title{
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
 }
 p, label, th, td{
     font-family: 'Montserrat', sans-serif;
@@ -79,6 +91,7 @@ label{
     flex-direction: column;
 }
 table{
+    margin-top: 20px;
     width: 80%;
 }
 th, td{
@@ -101,7 +114,8 @@ button:hover{
     cursor: pointer;
 }
 .bottom-label{
-    height: 9vh;
+    padding: 8px 0;
+    height: 30px;
     background-color: rgba(0, 42, 81, 0.5);
     /* background-color: #002a51; */
     display: flex;
@@ -112,58 +126,24 @@ button:hover{
 p{
     margin: 0;
 }
-/* 
-body{
-    font-family: 'Courier New', Courier, monospace;
-    margin: 0;
-    padding: 20px 0;
-    background-color: aquamarine;
+@media (max-width: 900px){
+    .form-left{
+        display: none;
+    }
+    .form-right{
+        width: 100%;
+    }
 }
-
-form{
-    height: 1470px;
-    width: 500px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px black;
-    border: 1px solid black;
-    background-color: white;
-    padding: 20px;
-    margin: 0 auto;
+@media (max-width: 650px){
+    .form-right{
+        padding: 20px 30px;
+    }
+    .input-labels{
+        width: 100%;
+    }
 }
-
-input, button{
-    width: 100%;
-    height: 30px;
-    margin-bottom: 20px;
+@media (max-width: 430px){
+    td input{
+        width: 40px;
+    }
 }
-
-button{
-    font-size: 15px;
-    color: white;
-    text-shadow: 0px 0px 5px black;
-    background-color: aqua;
-    border: 1px solid black;
-    cursor: pointer;
-}
-
-button:hover{
-    box-shadow: 0px 0px 5px black;
-    background-color: whitesmoke;
-}
-
-table{
-    border: 1px solid black;
-    margin-bottom: 20px;
-}
-
-td, th{
-    text-align: left;
-    width: 100px;
-}
-
-td input{
-    width: 80%;
-    height: 80%;
-} 
-*/
-
